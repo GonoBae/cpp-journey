@@ -1,0 +1,42 @@
+{
+    "configurations": [
+        // ── Windows ──────────────────────────────────────────────────────
+        {
+            "name": "Windows",
+            "includePath": [
+                "${workspaceFolder}/01.Makefile-Setup/include",
+                "${workspaceFolder}/01.Makefile-Setup/src",
+                // MSYS2 MinGW64 헤더 경로
+                "C:/mingw64/include/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            // MSYS2 컴파일러 경로 (설치 위치에 맞게 수정)
+            "compilerPath": "C:/mingw64/bin/g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "windows-gcc-x64"
+        },
+        // ── macOS ─────────────────────────────────────────────────────────
+        {
+            "name": "macOS",
+            "includePath": [
+                "${workspaceFolder}/01.Makefile-Setup/include",
+                "${workspaceFolder}/01.Makefile-Setup/src"
+            ],
+            "defines": ["_DEBUG"],
+            // Xcode Command Line Tools 또는 Homebrew g++
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "macos-clang-x64",
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ]
+        }
+    ],
+    "version": 4
+}

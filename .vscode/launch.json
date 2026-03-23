@@ -1,0 +1,55 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        // ── Windows : GDB (MinGW / MSYS2) ───────────────────────────────
+        {
+            "name": "Debug (Windows - GDB)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/01.Makefile-Setup/bin/app.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/01.Makefile-Setup",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            // MinGW 경로 - 본인 환경에 맞게 수정
+            // MSYS2 예: C:/msys64/mingw64/bin/gdb.exe
+            "miDebuggerPath": "C:/mingw64/bin/gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "make: debug",
+            "windows": {}
+        },
+        // ── macOS : LLDB ─────────────────────────────────────────────────
+        {
+            "name": "Debug (macOS - LLDB)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/01.Makefile-Setup/bin/app",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/01.Makefile-Setup",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "make: debug",
+            "osx": {}
+        },
+        // ── macOS : CodeLLDB 확장 사용 시 ────────────────────────────────
+        {
+            "name": "Debug (macOS - CodeLLDB)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/01.Makefile-Setup/bin/app",
+            "args": [],
+            "cwd": "${workspaceFolder}/01.Makefile-Setup",
+            "preLaunchTask": "make: debug"
+        }
+    ]
+}

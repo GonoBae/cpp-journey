@@ -1,0 +1,109 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // ── 1. Debug 빌드 (기본 Ctrl+Shift+B) ───────────────────────────
+        {
+            "label": "make: debug",
+            "type": "shell",
+            "command": "make debug",
+            "windows": { "command": "mingw32-make debug" },
+            "options": {
+                "cwd": "${workspaceFolder}/01.Makefile-Setup"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": ["relative", "${workspaceFolder}/01.Makefile-Setup"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        // ── 2. Release 빌드 ──────────────────────────────────────────────
+        {
+            "label": "make: release",
+            "type": "shell",
+            "command": "make release",
+            "windows": { "command": "mingw32-make release" },
+            "options": {
+                "cwd": "${workspaceFolder}/01.Makefile-Setup"
+            },
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": "$gcc"
+        },
+        // ── 3. Clean ─────────────────────────────────────────────────────
+        {
+            "label": "make: clean",
+            "type": "shell",
+            "command": "make clean",
+            "windows": { "command": "mingw32-make clean" },
+            "options": {
+                "cwd": "${workspaceFolder}/01.Makefile-Setup"
+            },
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        },
+        // ── 4. Rebuild (clean + debug) ───────────────────────────────────
+        {
+            "label": "make: rebuild",
+            "type": "shell",
+            "command": "make rebuild",
+            "windows": { "command": "mingw32-make rebuild" },
+            "options": {
+                "cwd": "${workspaceFolder}/01.Makefile-Setup"
+            },
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": "$gcc"
+        },
+        // ── 5. Info ──────────────────────────────────────────────────────
+        {
+            "label": "make: info",
+            "type": "shell",
+            "command": "make info",
+            "windows": { "command": "mingw32-make info" },
+            "options": {
+                "cwd": "${workspaceFolder}/01.Makefile-Setup"
+            },
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        }
+    ]
+}
