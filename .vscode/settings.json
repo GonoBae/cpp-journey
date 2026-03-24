@@ -23,9 +23,24 @@
 
     // ── 터미널 설정 ────────────────────────────────────────────────────
     // Windows: PowerShell 기본 사용 (MinGW가 PATH에 있으므로 mingw32-make 사용 가능)
+    "terminal.integrated.defaultProfile.windows": "PowerShell 7",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell 7": {
+            "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+            "icon": "terminal-powershell",
+            "args": ["-NoExit"]
+        }
+    },
 
     // ── 저장 시 자동 포맷 ──────────────────────────────────────────────
+    "files.encoding": "utf8",
     "editor.formatOnSave": true,
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.suggest.localityBonus": true,
+    "editor.autoIndent": "full",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
 
     // ── 빌드 출력 obj/bin 폴더를 탐색기에서 숨김 ────────────────────────
     "files.exclude": {

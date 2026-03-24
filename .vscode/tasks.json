@@ -6,7 +6,9 @@
             "label": "make: debug",
             "type": "shell",
             "command": "make debug",
-            "windows": { "command": "mingw32-make debug" },
+            "windows": {
+                "command": "mingw32-make debug"
+            },
             "options": {
                 "cwd": "${workspaceFolder}/01.Makefile-Setup"
             },
@@ -22,7 +24,10 @@
             },
             "problemMatcher": {
                 "owner": "cpp",
-                "fileLocation": ["relative", "${workspaceFolder}/01.Makefile-Setup"],
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}/01.Makefile-Setup"
+                ],
                 "pattern": {
                     "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
                     "file": 1,
@@ -38,7 +43,9 @@
             "label": "make: release",
             "type": "shell",
             "command": "make release",
-            "windows": { "command": "mingw32-make release" },
+            "windows": {
+                "command": "mingw32-make release"
+            },
             "options": {
                 "cwd": "${workspaceFolder}/01.Makefile-Setup"
             },
@@ -56,7 +63,9 @@
             "label": "make: clean",
             "type": "shell",
             "command": "make clean",
-            "windows": { "command": "mingw32-make clean" },
+            "windows": {
+                "command": "mingw32-make clean"
+            },
             "options": {
                 "cwd": "${workspaceFolder}/01.Makefile-Setup"
             },
@@ -74,7 +83,9 @@
             "label": "make: rebuild",
             "type": "shell",
             "command": "make rebuild",
-            "windows": { "command": "mingw32-make rebuild" },
+            "windows": {
+                "command": "mingw32-make rebuild"
+            },
             "options": {
                 "cwd": "${workspaceFolder}/01.Makefile-Setup"
             },
@@ -87,12 +98,37 @@
             },
             "problemMatcher": "$gcc"
         },
-        // ── 5. Info ──────────────────────────────────────────────────────
+        // ── 5. Run (빌드 후 실행) ────────────────────────────────────────
+        {
+            "label": "make: run",
+            "type": "shell",
+            "command": "make debug && ./bin/app.exe",
+            "windows": {
+                "command": "mingw32-make debug && .\\bin\\app.exe"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/01.Makefile-Setup"
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": false
+            },
+            "problemMatcher": []
+        },
+        // ── 6. Info ──────────────────────────────────────────────────────
         {
             "label": "make: info",
             "type": "shell",
             "command": "make info",
-            "windows": { "command": "mingw32-make info" },
+            "windows": {
+                "command": "mingw32-make info"
+            },
             "options": {
                 "cwd": "${workspaceFolder}/01.Makefile-Setup"
             },
