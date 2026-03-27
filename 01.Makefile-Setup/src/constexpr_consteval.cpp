@@ -41,7 +41,7 @@ constexpr int someFunction()
     }
 }
 
-int exe()
+int const_exe()
 {
     // const 보다 명확하게 컴파일 타임 확정임을 명시
     // const -> 런타임 초기화 가능
